@@ -6,8 +6,8 @@ $file = $ARGV[0];
 open IN, $file or die;
 @file1 = <IN>;
 
-# open OUT, ">RNA_seq_STAR_SALMON_soham.sh" or die;
-open OUT, ">RNA_seq_raw_files_blast.sh" or die;
+open OUT, ">RNA_seq_STAR_SALMON_soham.sh" or die;
+# open OUT, ">RNA_seq_raw_files_blast.sh" or die;
 $j = 13;
 # for ($i = 1; $i<=48; $i++)
 my %filename;
@@ -38,8 +38,8 @@ foreach my $sample (sort keys %filename)
 		# print OUT "cd STAR_Alignment$sample\n";
 		print OUT "cat $a $c > Read1.fastq.gz\n";
 		print OUT "cat $b $d > Read2.fastq.gz\n";
-		# print OUT "STAR --runThreadN 54 --readFilesCommand zcat --quantMode GeneCounts --genomeDir /storage/scratch2/ss1293/15.Yosef_RNASeq_MYB30/Arabidopsis_genomeTAIR10/genome_index  --outFileNamePrefix STAR_Alignment$sample/ --readFilesIn STAR_Alignment$sample/Read1.fastq.gz STAR_Alignment$sample/Read2.fastq.gz\n";
-		print OUT "magicblast -query Read1.fastq.gz -query_mate Read2.fastq.gz -db bar -infmt fastq -out S$sample\_output_blasthits.txt -num_threads 27 -outfmt tabular -no_unaligned\n";
+		print OUT "STAR --runThreadN 54 --readFilesCommand zcat --quantMode GeneCounts --genomeDir /storage/scratch2/ss1293/15.Yosef_RNASeq_MYB30/Arabidopsis_genomeTAIR10/genome_index  --outFileNamePrefix STAR_Alignment$sample/ --readFilesIn STAR_Alignment$sample/Read1.fastq.gz STAR_Alignment$sample/Read2.fastq.gz\n";
+		# print OUT "magicblast -query Read1.fastq.gz -query_mate Read2.fastq.gz -db bar -infmt fastq -out S$sample\_output_blasthits.txt -num_threads 27 -outfmt tabular -no_unaligned\n";
 		print OUT "rm Read*.fastq.gz \n";
 		print OUT "echo \"done STAR S$sample \"\n\n";
 

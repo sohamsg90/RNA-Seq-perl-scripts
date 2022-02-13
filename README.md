@@ -1,10 +1,26 @@
 # RNA-Seq-perl-scripts
 
-This file will proide instruction on setting up an automated RNA-seq pipeline.
-Following tools are required for this analysis
-1. fastQC
-2. STAR
-3. DeSEQ2
-Custom perl scripts that can be used for manipulation of DESeq2 output files for generating tables. 
-Input filename has to be manually edited for each script.
+## Software requirements
+This file will provide detailed instruction on setting up an automated RNA-seq pipeline.
+Following tools are required for this analysis. These must be installed and in path.
+
+1. Quality control - fastQC
+2. Alignment of reads - STAR
+3. Differential expression analysis - DeSEQ2
+
+## Initialization
+1. Download compressed readFiles from designated website/server.
+2. Contruct a 3-column table with Folder-name, sample-name and group (replicates) information:
+
+| Folder-name       | sample-name | group        |
+|-------------------|-------------|--------------|
+| STAR_AlignmentWN1 | WN1         | WT_untreated |
+| STAR_AlignmentWN2 | WN2         | WT_untreated |
+| STAR_AlignmentWN3 | WN3         | WT_untreated |
+
+This file will serve as a database to construct an automation script.
+
+## Generate automation script
+
+
 
