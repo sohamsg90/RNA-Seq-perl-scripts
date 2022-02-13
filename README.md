@@ -26,7 +26,7 @@ sh RNA_seq_STAR_SALMON_soham.sh
 ```
 This will perform quality control (QC) using fastQC, followed by reads alignment. Genome index has to be generated using STAR command as instructed in manual.
 
-## Differential gene expression
+# Differential gene expression
 
 All gene counts file generated as a result of running STAR, has to be concatenated based on each replicate of each sample. 
 
