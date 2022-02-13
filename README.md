@@ -10,7 +10,26 @@ Following tools are required for this analysis. These must be installed and in p
 
 ## Initialization
 1. Download compressed readFiles from designated website/server.
-2. Contruct a 3-column table with Folder-name, sample-name and group (replicates) information:
+2. Construct a text file with list of samples/folder. This file will serve as the input for generation of an automation script.
+3. Run the following command:
+```
+perl star_salmon_bash_generator.pl folder_list.txt
+
+```
+`This will generate an automation script RNA_seq_STAR_SALMON_soham.sh`
+
+## Execution
+
+```
+sh RNA_seq_STAR_SALMON_soham.sh
+
+```
+
+## Generate automation script
+
+
+
+Contruct a 3-column table with Folder-name, sample-name and group (replicates) information:
 
 | Folder-name       | sample-name | group        |
 |-------------------|-------------|--------------|
@@ -19,8 +38,3 @@ Following tools are required for this analysis. These must be installed and in p
 | STAR_AlignmentWN3 | WN3         | WT_untreated |
 
 This file will serve as a database to construct an automation script.
-
-## Generate automation script
-
-
-
