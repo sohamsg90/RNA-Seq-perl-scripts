@@ -18,7 +18,7 @@ perl star_salmon_bash_generator.pl folder_list.txt
 ```
 This will generate an automation script `RNA_seq_STAR_SALMON_soham.sh`
 
-## Execution
+### Execution
 
 ```
 sh RNA_seq_STAR_SALMON_soham.sh
@@ -30,7 +30,7 @@ This will perform quality control (QC) using fastQC, followed by reads alignment
 
 All gene counts file generated as a result of running STAR, has to be concatenated based on each replicate of each sample. 
 
-# Pre-processing
+### Pre-processing
 Contruct a 3-column table with Folder-name, sample-name and group (replicates) information:
 
 | Folder-name       | sample-name | group        |
@@ -41,7 +41,7 @@ Contruct a 3-column table with Folder-name, sample-name and group (replicates) i
 
 This file will serve as a input to concatenate gene counts.
 
-# Execution
+### Execution
 ``` 
 perl star2deseq_strand-specific_paired-end.pl
 ```
